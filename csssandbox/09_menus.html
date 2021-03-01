@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Styling</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #4c6ca0;
+      border-radius: 5px;
+      /* set overflow to auto to allow background to show with li's floated 
+
+      The problem with using overflow to create a new BFC is that the overflow property is meant for telling the browser how you want to deal with overflowing content. There are some occasions in which you will find you get unwanted scrollbars or clipped shadows when you use this property purely to create a BFC. In addition, it is potentially not readable for a future developer, as it might not be obvious why you used overflow for this purpose. If you use overflow, it is a good idea to comment the code to explain.
+      */
+      /* overflow: auto; */
+
+      /* Can use overflow: hidden to prevent any scrollbar from appearing. */
+      /* overflow: hidden; */
+
+      /* 
+      A newer value of display lets us create a new BFC without any other potentially problematic side-effects. Using display: flow-root on the containing block creates a new BFC .
+
+      With display: flow-root; on the <div>, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
+
+      The value name of flow-root makes sense when you understand you are creating something that acts like the root element (<html> element in browser) in terms of how it creates a new context for the flow layout inside it.
+
+      Since we are using a float we need to do this or use overflow: auto
+      */
+      display: flow-root;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 20px;
+
+    }
+
+    .navbar li a:hover {
+      background: #446190;
+      border-radius: 5px;
+      color: #f4f4f4
+    }
+
+    /* Side Menu Styles */
+    .side-menu {
+      list-style: none;
+      border: 1px #ddd solid;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+    }
+
+    .side-menu li {
+      font-size: 18;
+      line-height: 2.4em;
+      border-bottom: dotted 1px #ddd;
+    }
+
+    /* Pseudo selector to select the last dotted line */
+    .side-menu li:last-child {
+      border: none;
+    }
+
+    .side-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .side-menu li a:hover {
+      color: coral;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <br>
+  <br>
+  <ul class="side-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>

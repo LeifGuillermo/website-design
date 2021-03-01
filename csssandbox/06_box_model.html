@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model / Margin & Padding</title>
+  <style>
+    /* CSS RESET */
+    /* the asterix selects 'everything' */
+    * {
+      margin: 0;
+      padding: 0;
+      /* Prevent the padding from increasing the overall size of each element.
+      Instead padding does not add on top of the width/height */
+      box-sizing: border-box;
+    }
+    .box {
+      background: lightgray;
+      border: 3px solid gray;
+      width: 500px;
+
+      /* Padding on all sides - padding is inside of the border box*/
+      padding: 60px;
+
+      /* padding per side, properties further down overwrite properties above.*/
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+
+      /* padding shortand = top, right, bottom, left */
+      padding: 10px 20px 10px 20px;
+      /* more-short hand for padding = top/bottom left/right */
+      padding: 10px 20px;
+
+      /* Margin on all sides - margin is outside of the border box.*/
+      margin: 20px;
+
+      /* margin per side, properties further down overwrite properties above.*/
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+
+      /* padding shortand = top, right, bottom, left */
+      margin: 10px 20px 10px 20px;
+      /* more-short hand for padding = top/bottom left/right */
+      margin: 10px 20px;
+    }
+
+    .box h3{
+      padding-bottom: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Box One</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Rem eligendi excepturi beatae dolorum nam at reprehenderit sit expedita voluptates esse.</p>
+  </div>
+  <div class="box">
+    <h3>Box Two</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi excepturi beatae dolorum nam at reprehenderit sit expedita voluptates esse.</p>
+  </div>
+</body>
+</html>

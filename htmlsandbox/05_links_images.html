@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links & Images</title>
+</head>
+
+<body>
+  <!-- a tags are inline tags, so they will not add a new line to the page. You can use one of the
+  other tags such as the p tag to add new lines-->
+  <!-- Open Google in Current Tab -->
+  <p>
+    <a href="http://google.com">Click here for Google in this tab</a>
+  </p>
+
+  <p>
+    <!-- Use target="_blank" to open link in a new tab-->
+    <a href="http://google.com" target="_blank">Click here for Google in a new tab</a>
+  </p>
+
+  <!-- Internal link -->
+  <p>
+    <a href="./04_typography.html">Typography</a>
+  </p>
+
+  <p>Local image:</p>
+  <!-- Local image -->
+  <!-- Adding width or height will also auto-adjust the height or width respectively.
+    Here we have shrunken the image to a value of 200. Normally, this should be done with CSS, however.-->
+  <img src="./images/sample.jpg" alt="My Image" width="400">
+
+  <p>Image from <a href="https://source.unsplash.com" target="_blank">source.unsplash.com</a></p>
+  <!-- Remote Image -->
+  <img src="https://source.unsplash.com/400x400/?nature,sea" alt="Image from source.unsplash.com" width="400">
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonts</title>
+
+  <!-- check out https://fonts.google.com/ for additional fonts
+ -->
+  <!-- Here is a link to load a font from google fonts. -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet"> -->
+  <!--
+  There is also an import statement you can use to import fonts into your
+  css file. 
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+  </style>
+-->
+
+  <style>
+    /* Putting your font in the body selector will allow it to affect the whole page. */
+    body {
+      /* font-family: 'Akaya Telivigala', cursive; */
+      font-size: 18px;
+      /* em is relative to parent element */
+      line-height: 1.6em;
+      /* VSCode will give you a popup menu of choices which is nice. 
+      fonts are listed in order of preference when available, so in this case if Arial is not available Helvetica will be used. if Arial and Helvetica are not available sans-serif will be used.
+      */
+      font-family: Arial, Helvetica, sans-serif;
+      /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    }
+
+    /* Technically the p can be omitted, as this will look at all children, sub-childre, etc. We are targeting the span in the first div. */
+    #welcome p span {
+      font-weight: bold;
+    }
+
+    #about p span {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Welcome</h2>
+    <p>Lorem ipsum dolor <span>sit amet consectetur, adipisicing elit.</span> Harum eligendi minima alias commodi cumque nemo earum
+      reiciendis modi nam recusandae.</p>
+  </div>
+  <div id="about">
+    <h2>About</h2>
+    <p>Lorem ipsum, dolor <span>sit amet consectetur adipisicing elit. Odit aspernatur modi eum voluptas</span> distinctio beatae.
+      Tempore, sequi? Ipsum, totam quas.</p>
+  </div>
+</body>
+
+</html>

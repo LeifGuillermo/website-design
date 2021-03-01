@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em & Rem</title>
+
+  <style>
+      /* 
+      padding in {box-1 p} is actually equal to 1.5em because it is inheriting font-size from the p's font-size
+      font-size is 30px because it is 1.5 * 20. Padding is then 30 pixels as well. This is pretty undesirable behavior.
+      */
+    /* #box-1 {
+      font-size: 20px;
+      padding: 1em;
+    }
+    #box-1 p{
+
+      font-size: 1.5em;
+      padding: 1em;
+    }
+    #box-1 ul {
+      font-size: 1.2em;
+    } */
+
+    /* REM units are better for accessibility as well. Adjusting the browser font size in the accessibility settings has no effect on EM units if there is a parent element font size, but does effect the REM units. If, when using EMs there is not parent element font size it accessibility will change the html/root font-size and so things may work, but that behavior is less reliable. */
+    html {
+      /* Using pixels instead of percentage is better for eyeballing things, but if you need exact numbers going the percentage route is better. */
+      /* font-size: 10px; */
+      /* 62.5% is 10 pixels; (16 * 0.625 == 10) */
+      font-size: 62.5%; 
+    }
+
+    #box-2 h3 {
+      font-size: 2rem;
+    }
+
+    #box-2 p {
+      font-size: 1.6rem;
+      line-height: 1.7rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- The ULs here increase in size because they are using em and inheriting the base from their parent. -->
+  <!-- <div id="box-1">
+    <h3>Box One</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque nam consectetur voluptatibus aperiam doloremque consequuntur odio, unde praesentium fugit molestias.</p> 
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>4</li>
+    </ul>
+  </div> -->
+  <div id="box-2">
+    <h3>Box Two</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque nam consectetur voluptatibus aperiam doloremque consequuntur odio, unde praesentium fugit molestias.</p>
+  </div>
+</body>
+</html>

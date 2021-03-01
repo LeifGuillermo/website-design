@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <form action="process.php">
+    <div>
+      <!-- Match the "for" attribute in the label with the "id" attribute in the input to
+      allow the user to click on the label to enter the textbox.
+      the "name" attribute is used for things like when you pass the input to the server.
+      The server can then reference the input value by it's name, in this case "userName" -->
+      <!-- Text -->
+      <label for="name">Name</label>
+      <br>
+      <input type="text" id="name" name="userName" value="John Doe">
+      <br>
+      <!-- Password -->
+      <label for="password">Password</label>
+      <br>
+      <input type="password" id="password">
+      <br>
+      <!-- Email -->
+      <!-- Client-side validation is automatically done with the email type. You should
+      definitely still use server-side validation as well.-->
+      <label for="email">Email</label>
+      <br>
+      <input type="email" name="userEmail" id="email" placeholder="Enter an Email">
+      <br>
+      <!-- Message -->
+      <label for="message">Message</label>
+      <br>
+      <!-- Use cols and rows to set default size -->
+      <textarea name="userMessage" id="message" cols="50" rows="5"></textarea>
+    </div>
+    <!-- Select -->
+    <div>
+      <label for="gender">Gender</label>
+      <select name="userGender" id="gender">
+        <option value="other">Other</option>
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+      </select>
+    </div>
+    <!-- Number -->
+    <div>
+      <label for="age">Age</label>
+      <br>
+      <input type="number" name="userAge" id="age">
+    </div>
+    <!-- Date -->
+    <div>
+      <label for="birthdate"></label>
+      <br>
+      <input type="date" name="userBirthdate" id="birthdate">
+    </div>
+    <!-- Radio Buttons -->
+    <div>
+      <label for="membership">Membership:</label>
+      <input type="radio" name="userMembership" id="membership" value="simple">Simple
+      <input type="radio" name="userMembership" id="membership" value="standard" checked>Standard
+      <input type="radio" name="userMembership" id="membership" value="super">Super
+    </div>
+    <!-- Check Boxes -->
+    <div>
+      <label for="hobbies">Hobbies:</label>
+      <input type="checkbox" name="userHobbies" id="hobbies" value="hiking" >Hiking
+      <input type="checkbox" name="userHobbies" id="hobbies" value="music" >Music
+      <input type="checkbox" name="userHobbies" id="hobbies" value="coding" checked>Coding
+      <input type="checkbox" name="userHobbies" id="hobbies" value="sports" >Sports
+    </div>
+    <!-- Submit Buttons -->
+    <!-- Input Submit -->
+    <input type="submit" value="Submit">
+    <br>
+    <!-- Button Submit -->
+    <!-- <button type="submit">Submit</button> -->
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>

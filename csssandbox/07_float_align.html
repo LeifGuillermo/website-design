@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float & Align</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .clr {
+      clear: both;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4em;
+    }
+
+    .container {
+      /* A width needs to be specified for auto-margin on width to work. */
+      /* width: 960px; */
+      
+      /* 
+      max-width allows the text to fit/shrink if the screen width is too small like on a phone. 
+      Always use max-width on containers.
+      */
+      max-width: 960px;
+      /* 30px on top and bottom, auto left and right. */
+      margin: 30px auto;
+    }
+
+    .box {
+      background: lightgray;
+      border: 1px solid #333;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .box p {
+      /* default is left */
+      text-align: left;
+      text-align: right;
+      text-align: center;
+      text-align: justify;
+    }
+    #box-2 {
+      width: 68%;
+      float: left;
+    }
+    #box-3 {
+      width: 30%;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="box-1" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quae obcaecati veritatis exercitationem minus facere, id qui nostrum esse temporibus.</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quae obcaecati veritatis exercitationem minus facere, id qui nostrum esse temporibus.</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quae obcaecati veritatis exercitationem minus facere, id qui nostrum esse temporibus.</p>
+    </div>
+    <div class="clr"></div>
+    <div id="box-4" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quae obcaecati veritatis exercitationem minus facere, id qui nostrum esse temporibus.</p>
+    </div>
+  </div>
+
+  
+
+
+</body>
+</html>

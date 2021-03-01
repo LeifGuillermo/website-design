@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test File</title>
+  <style>
+    /* Class targeting is higher importance that element targeting */
+    /* .hello {
+      color:red;
+    } */
+    h1 {
+      /* Display none removes it from the DOM completely */
+      /* display: none; */
+      /* visibility hidden simply hides it but it is still there. */
+      /* visibility: hidden; */
+      color: blue !important;
+    }
+    .hello {
+      color:red;
+      margin: -30px;
+      margin-left: -30px;
+      /* negative values do not work with padding */
+      /* padding: -30px; this doesn't do anything*/
+    }
+  </style>
+</head>
+<body>
+  <h1 class="hello">Hello World</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam sint distinctio ducimus nesciunt ipsa quos ratione dolorem labore necessitatibus tempore dicta quaerat totam sapiente delectus libero, vel iste quas.</p>
+</body>
+</html>

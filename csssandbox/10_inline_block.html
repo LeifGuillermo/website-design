@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline & Block Styling</title>
+  <style>
+
+    li {
+      display:inline;
+    }
+
+    li a {
+      padding-right: 20px;
+    }
+
+    img {
+      /* Doesn't do anythign with inline elements */
+      display: block;
+      margin: auto; 
+    }
+    .box {
+      /* You can't use width on inline, so we can't put the boxes on the same line this way. */
+      /* width:32%; */
+      /* display: inline; */
+      /* Using inline block removes the newline but allows us to add widths. */
+      display: inline-block;
+      width:32%;
+      /* You can also do this in the * all selector but we just need box-sizing: border-box so that padding doesn't prevent our three boxes from fitting on the same line. */
+      box-sizing: border-box;
+      background: #f4f4f4;
+      padding: 20px;
+      /* Margin is also being ignored when display is inline. */
+      margin-bottom:15px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Fashion</a></li>
+  </ul>
+  <br>
+  <br>
+  <img src="./img/leaf.png" alt="My Image">
+  <img src="./img/leaf.png" alt="My Image">
+  <br>
+  <br>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut quibusdam illo omnis veniam? Beatae, in inventore vitae accusantium at possimus vero dicta explicabo blanditiis fuga consequatur non perspiciatis quam.</p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut quibusdam illo omnis veniam? Beatae, in inventore vitae accusantium at possimus vero dicta explicabo blanditiis fuga consequatur non perspiciatis quam.</p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut quibusdam illo omnis veniam? Beatae, in inventore vitae accusantium at possimus vero dicta explicabo blanditiis fuga consequatur non perspiciatis quam.</p>
+  </div>
+</body>
+</html>

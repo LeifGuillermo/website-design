@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists & Tables</title>
+</head>
+
+<body>
+  <!-- Unordered lists -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <!-- Avoid using styles in HTML, but here are the options (notice default is disc): -->
+  <ul style="list-style: disc">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <ul style="list-style: square">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <ul style="list-style: circle">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <ul style="list-style: none">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- Ordered Lists -->
+  <ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+  <!-- Type 1 is the default -->
+  <ol type="1">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+  <ol type="A">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+  <ol type="a">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+  <ol type="I">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+  <ol type="i">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+
+  <!-- Nested Lists -->
+  <!-- Notice how nested list bullet points are auto-styled -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2
+      <ul>
+        <li>Nested Item 1</li>
+        <li>Nested Item 2</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <ul style="list-style: square">
+    <li>Item 1</li>
+    <li>Item 2
+      <ul>
+        <li>Nested Item 1</li>
+        <li>Nested Item 2</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- Tables -->
+  <!-- Tables are _only_ for tabular data now. -->
+  <!-- Don't use styles like this. Instead use CSS. -->
+  <table style="width:600px">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>jdoe@email.com</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>janedoe@email.com</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Snow</td>
+        <td>jsnow@email.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

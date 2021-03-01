@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div, span, id, and class</title>
+  <style>
+    .card {
+      /* border: 1px solid #ccc; */
+      border-radius: 4px;
+      box-shadow: 10px 5px 5px darkslategrey;
+      background: #f4f4f4;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .enhance {
+      color: yellow;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-header">
+    <h1>My Website</h1>
+    <p>A site about me</p>
+  </div>
+  <ul id="main-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Use CSS classes if you want to repeat things. Use CSS ids if you don't 
+    You can put more than one class in a class attribute (separated by a space) but the rule of thumb is that if you use ids, do not ever repeat the same id.
+    (My thoughts on this are that for styles I'll probably use classes definitively, and I'll save ids for functional purposes.)
+  -->
+  <div id="about" class="card">
+    <h3>About</h3>
+    <p>Lorem ipsum, 
+      <!-- notice styling with a div knocks it down a line since div is a block element -->
+      <div class="enhance"> 
+        dolor sit amet consectetur adipisicing elit. Et in at non vel est dolorem 
+      </div>
+
+      consectetur magni sunt, alias eius praesentium dolor eaque eligendi explicabo nulla atque, minima totam, iusto reiciendis odio dolorum.
+      <!-- notice that span is inline and does not create new-lines -->
+      <span class="enhance"> 
+        dolor sit amet consectetur adipisicing elit. Et in at non vel est dolorem 
+      </span>
+      Omnis perferendis ea fugiat sit est hic?</p>
+  </div>
+
+  <div id="contact" class="card">
+    <h3>Contact Me</h3>
+    <ul>
+      <li>Address: 123 Easy Street, Albuquerque, NM</li>
+      <li>Phone: (555)-555-5555</li>
+      <li>Email: me@somethingcool.com</li>
+    </ul>
+  </div>
+
+  <div id="footer">
+    <p>Copyright &copy; 2021</p>
+  </div>
+</body>
+</html>
